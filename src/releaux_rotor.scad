@@ -10,39 +10,7 @@ module peg(h,r,o) {
 	}
 }
 
-module wedge(h,r,a,o){
-	intersection(){
-		peg(h,r,o);
-		rotate([0,0,90-a/2])
-			translate([r+o,0,0])
-			cube([2*(r+o),2*(r+o),2*h],center=true);
-		rotate([0,0,90+a/2])
-			translate([-(r+o),0,0])
-			cube([2*(r+o),2*(r+o),2*h],center=true);
-	}
-}
-
-
-
 //Following "Circle Squaring, a mechanical view" by Cox and Wagon
-
-////width of the rotor, height of the rotor, offset for the of triangular profile (> 0)
-//module rotor(w,h,o){
-//	//length unit
-//	u = 0.5*w;
-//	union(){
-//		rotate([0,0,-90])
-//		wedge(h,u*sqrt(2),90,o);
-////		rotate([0,0,67.5])
-////			translate([-u*(2-sqrt(2)),0,0])
-//		translate([-u,-u,0])
-//			rotate([0,0,22.5])
-//#			wedge(h,u*2,45,o);
-//	}
-//}
-
-
-
 //width of the rotor, height of the rotor, offset for the of triangular profile (> 0)
 module rotor(w,h,o,r_h,r_k,h_k){
 	//length unit
@@ -102,10 +70,7 @@ module frame(w,h,o,t){
 
 }
 
-
-
 union(){
 	frame(51.5,5,3,7);
 	rotor(50,5,3,2,3,8);
 }
-
