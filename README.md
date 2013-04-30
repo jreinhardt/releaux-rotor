@@ -23,6 +23,16 @@ Adapt the dimensions in the .scad file to your liking. Be careful with the offse
 A makefile is supplied to build a stl using OpenSCAD. Slice and print to your liking.
 
 
+Derivative
+----------
+
+This thing was heavily inspired by
+
+Reuleaux Triangle for FDM
+by SSD
+http://www.thingiverse.com/thing:5456
+
+
 License
 -------
 GPL3
