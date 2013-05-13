@@ -1,7 +1,12 @@
+//Following "Circle Squaring, a mechanical view" by Cox and Wagon
+
 eps = 0.01;
 $fn=100;
+
 // replace a simple cylinder with a middle tapered pair
-// height, radius and offset for the triangular profile
+// h = height
+// r = radius 
+// o = offset for the triangular profile
 module peg(h,r,o) {
 	union(){
 		cylinder(r1=r+o,r2=r, h=h/2);
@@ -10,40 +15,13 @@ module peg(h,r,o) {
 	}
 }
 
-module wedge(h,r,a,o){
-	intersection(){
-		peg(h,r,o);
-		rotate([0,0,90-a/2])
-			translate([r+o,0,0])
-			cube([2*(r+o),2*(r+o),2*h],center=true);
-		rotate([0,0,90+a/2])
-			translate([-(r+o),0,0])
-			cube([2*(r+o),2*(r+o),2*h],center=true);
-	}
-}
 
-
-
-//Following "Circle Squaring, a mechanical view" by Cox and Wagon
-
-////width of the rotor, height of the rotor, offset for the of triangular profile (> 0)
-//module rotor(w,h,o){
-//	//length unit
-//	u = 0.5*w;
-//	union(){
-//		rotate([0,0,-90])
-//		wedge(h,u*sqrt(2),90,o);
-////		rotate([0,0,67.5])
-////			translate([-u*(2-sqrt(2)),0,0])
-//		translate([-u,-u,0])
-//			rotate([0,0,22.5])
-//#			wedge(h,u*2,45,o);
-//	}
-//}
-
-
-
-//width of the rotor, height of the rotor, offset for the of triangular profile (> 0)
+// w = width of the rotor
+// h = height of the rotor
+// o = offset for the of triangular profile (> 0)
+// r_h = radius of the hole
+// r_k = radius of the knob
+// h_k = height of the knob
 module rotor(w,h,o,r_h,r_k,h_k){
 	//length unit
 	u = 0.5*w;
@@ -87,7 +65,10 @@ module SquareTrapezoid(w,r,h)
 	);
 }
 
-//width of the rotor (inner size), height, offset for profile, thickness of frame
+// w = width of the rotor (inner size)
+// h = height
+// o = offset for triangular profile
+// t = thickness of frame
 module frame(w,h,o,t){
 	translate([0,0,h/2])
 	difference(){
