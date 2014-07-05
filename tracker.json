@@ -26,6 +26,6 @@
             "fun"
          ],
          "description":"This is a variation of a Releaux triangle which has a point that describes a perfect square when the rotor moves inside a square. This allows in principle to create a tool that drills square holes from a circular motor. For details see Cox, B. & Wagon, S. Drilling for Polygons The American Mathematical Monthly, 2012, 119, 300-312 and Cox, B. & Wagon, S. Circle-Squaring: A Mechanical View The College Mathematics Journal, 2009, 40, 238-247"
-      },
+      }
    ]
 }
