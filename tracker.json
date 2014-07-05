@@ -1,0 +1,31 @@
+{
+   "url":"http://jreinhardt.github.io/releaux-rotor/tracker.json",
+   "maintainers":[
+      {
+         "name":"Johannes Reinhardt",
+         "email":"jreinhardt@ist-dein-freund.de"
+      }
+   ],
+   "things":[
+      {
+         "id":"6a1b0ba2-ec13-4b32-aa7d-7129230b195c",
+         "title":"Releaux Rotor",
+         "url":"http://jreinhardt.github.io/releaux-rotor/",
+         "downloadUrl": "https://github.com/jreinhardt/releaux-rotor/zipball/master",
+         "authors":[
+            {
+               "name":"Johannes Reinhardt",
+               "email":"jreinhardt@ist-dein-freund.de"
+            }
+         ],
+         "licenses":[
+            "GPL3"
+         ],
+         "tags":[
+            "math",
+            "fun"
+         ],
+         "description":"This is a variation of a Releaux triangle which has a point that describes a perfect square when the rotor moves inside a square. This allows in principle to create a tool that drills square holes from a circular motor. For details see Cox, B. & Wagon, S. Drilling for Polygons The American Mathematical Monthly, 2012, 119, 300-312 and Cox, B. & Wagon, S. Circle-Squaring: A Mechanical View The College Mathematics Journal, 2009, 40, 238-247"
+      },
+   ]
+}
